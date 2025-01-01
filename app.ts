@@ -17,7 +17,9 @@ const getData = async (url : string): Promise<GetDataType[]> => {
 
 getData(COMMENTS_URL)
   .then(data => {
-   console.log(data.map(({id, email}) => ({id, email})))
+    data.forEach(({id, email}) => {
+      console.log(`ID: ${id}, Email: ${email}`)
+    })
   })
 
 

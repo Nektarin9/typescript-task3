@@ -49,10 +49,10 @@ var getData = function (url) { return __awaiter(_this, void 0, void 0, function 
 }); };
 getData(COMMENTS_URL)
     .then(function (data) {
-    console.log(data.map(function (_a) {
+    data.forEach(function (_a) {
         var id = _a.id, email = _a.email;
-        return ({ id: id, email: email });
-    }));
+        console.log("ID: ".concat(id, ", Email: ").concat(email));
+    });
 });
 /**
  * ID: 1, Email: Eliseo...
